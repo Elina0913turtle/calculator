@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+/* 计算器外壳容器 */
+.calculator {
+  width: 320px;
+  background-color: #22252d;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* 显示屏 */
+.display {
+  background-color: #1a1c22;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: right;
+  margin-bottom: 20px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: #888888;
+  font-size: 1.1rem;
+  min-height: 1.2rem;
+}
+
+.current-operand {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* 按键网格系统 */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  background-color: #292d36;
+  color: #ffffff;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  padding: 16px 0;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #353945;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* 特殊功能键样式 */
+.btn-action {
+  color: #26e7a6;
+  font-weight: bold;
+}
+
+.btn-operator {
+  color: #ff7676;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.btn-equals {
+  grid-row: span 2;
+  background-color: #ff7676;
+  color: #ffffff;
+  font-weight: bold;
+  height: 100%;
+}
+
+.btn-equals:hover {
+  background-color: #e06363;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
